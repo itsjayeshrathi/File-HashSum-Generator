@@ -15,7 +15,7 @@ public class Hash {
         }
         byte[] hash = digest.digest();
         String hashedString = Base64.toBase64String(hash);
-        System.out.println(dirname.concat("\t->\t").concat(hashedString));
+        System.out.println(dirname.concat("\t\t->\t\t").concat(hashedString));
         return hashedString;
     }
 }
