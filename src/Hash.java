@@ -6,7 +6,7 @@ import org.bouncycastle.util.encoders.Base64;
 
 public class Hash {
     // Method that calculates the hash of a particular file by providing it filepath
-    public String calculateHash(String dirname) throws NoSuchAlgorithmException, IOException {
+    public static String calculateHash(String dirname) throws NoSuchAlgorithmException, IOException {
         // defined a byte array to read the large data in small chunks
         byte[] chunkSize = new byte[10000];
         int count;
@@ -30,7 +30,7 @@ public class Hash {
         String hashedString = Base64.toBase64String(hash);
 
         //printing and returning the result
-        System.out.println(dirname.concat("\t\t->\t\t").concat(hashedString));
+        System.out.println(dirname.concat("\t->\t").concat(hashedString));
         return hashedString;
     }
 }
